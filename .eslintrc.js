@@ -10,7 +10,15 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   rules: {
     'prettier/prettier': ['error', { singleQuote: true }],
+    'import/extensions': 'off',
   },
 };
