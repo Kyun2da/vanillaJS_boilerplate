@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "baseUrl": "./",
     "noImplicitAny": true,
     "sourceMap": true,
-    "module": "esnext",
-    "target": "es5",
+    "esModuleInterop": true,
     "allowJs": true,
-    "moduleResolution": "node"
-  }
+    "lib": ["dom", "ES2019"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "src/types"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
